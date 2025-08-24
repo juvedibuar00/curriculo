@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define codificação de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Define viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Currículo - Juvenaldo Florentino Canja</title>
+    
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones (email, WhatsApp, LinkedIn) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- CSS interno -->
+    <style>
+        /* Reset básico e fonte padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Corpo da página */
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Links sem sublinhado e cor padrão */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header fixo */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo do currículo */
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Menu de navegação */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+
+        /* Seção principal (hero) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Texto na seção hero */
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Botão Saiba Mais */
+        .hero-text button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-text button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Foto circular do candidato */
+        .hero img {
+            max-width: 250px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+        }
+
+        /* Seções gerais */
+        .section {
+            padding: 60px 50px;
+        }
+
+        /* Títulos das seções */
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
+
+        /* Cards internos */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* Estilo individual dos cards */
+        .card {
+            background-color: #fff;
+            padding: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Hover efeito nos cards */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .card p,
+        .card a {
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Ícones dentro de links */
+        .card a i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+
+        /* Ícones sociais no final da seção de contato */
+        .social-icons a {
+            font-size: 1.8rem;
+            margin: 0 10px;
+            color: #007bff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        /* Hover animado nos ícones sociais */
+        .social-icons a:hover {
+            color: #0056b3;
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e menu -->
+    <header>
+        <div class="logo">Juvenaldo F. Canja</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal com foto e descrição -->
+    <section class="hero" id="sobre">
+        <div class="hero-text">
+            <h1>Juvenaldo Florentino Canja</h1>
+            <p>Profissional dedicado em [área de atuação], com experiência em [resumo das habilidades]. Sempre buscando
+                oportunidades de crescimento e novos desafios.</p>
+            <!-- Botão com link externo -->
+            <a href="https://ge.globo.com/?utm_source=barraGCOM" target="_blank">
+                <button>Saiba Mais</button>
+            </a>
+        </div>
+        <!-- Foto do candidato -->
+        <img src="foto-juvenaldo.jpg" alt="Foto de Juvenaldo Florentino Canja">
+    </section>
+
+    <!-- Seção de Experiência -->
+    <section class="section" id="experiencia">
+        <h2>Experiência Profissional</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Empresa X</h3>
+                <p>Cargo: [Seu Cargo]</p>
+                <p>Período: [Ano de Início] - [Ano de Saída]</p>
+                <p>Principais responsabilidades e conquistas.</p>
+            </div>
+            <div class="card">
+                <h3>Empresa Y</h3>
+                <p>Cargo: [Seu Cargo]</p>
+                <p>Período: [Ano de Início] - [Ano de Saída]</p>
+                <p>Principais responsabilidades e conquistas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Educação -->
+    <section class="section" id="educacao">
+        <h2>Formação Acadêmica</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Universidade A</h3>
+                <p>Curso: [Seu Curso]</p>
+                <p>Período: [Ano de Início] - [Ano de Conclusão]</p>
+            </div>
+            <div class="card">
+                <h3>Curso Complementar B</h3>
+                <p>Descrição do curso ou certificação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato com links interativos -->
+    <section class="section" id="contato">
+        <h2>Contato</h2>
+        <div class="cards">
+            <!-- Email -->
+            <div class="card">
+                <h3>Email</h3>
+                <a href="mailto:juvenaldo@email.com">
+                    <i class="fas fa-envelope"></i>juvenaldo@email.com
+                </a>
+            </div>
+            <!-- WhatsApp -->
+            <div class="card">
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/5585997822831" target="_blank">
+                    <i class="fab fa-whatsapp"></i>+55 85 997822831
+                </a>
+            </div>
+            <!-- LinkedIn -->
+            <div class="card">
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/juvenaldocanja" target="_blank">
+                    <i class="fab fa-linkedin"></i>linkedin.com/in/juvenaldocanja
+                </a>
+            </div>
+        </div>
+
+        <!-- Ícones sociais rápidos -->
+        <div class="social-icons" style="text-align:center; margin-top:20px;">
+            <a href="https://www.linkedin.com/in/juvenaldocanja" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/5500000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:juvenaldo@email.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        &copy; 2025 Juvenaldo Florentino Canja. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
